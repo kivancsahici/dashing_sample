@@ -3,9 +3,6 @@ var current_karma = 0;
 
 var items = [{"label":"Leverage","value":17},{"label":"Streamlininess","value":4},{"label":"Pivoting","value":3},{"label":"Turn-key","value":24},{"label":"Exit strategy","value":69}, {"label":"Paradign shift","value":14}, {"label":"Web 2.0","value":57}, {"label":"Synergy","value":45}, {"label":"Enterprise","value":12}];
 
-labels = labels.sort( function() { return 0.5 - Math.random() } );
-values.sort( function() { return 0.5 - Math.random() } );
-
 setInterval(function() {
   var last_valuation = current_valuation;
   var last_karma = current_karma;
