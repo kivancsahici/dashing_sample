@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "nuvo-dashing-js": "~0.1.11"
+    "nuvo-dashing-js": "~0.1.11",	
+	"node-gyp": "3.6.2"
   },
   "engines": {
     "node": "8.9.4"
