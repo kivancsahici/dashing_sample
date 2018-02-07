@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "node-dashing-js": "~1.0.3"
+    "nuvo-dashing-js": "~1.0.3"
   },
   "engine": "node >= 0.10"
 }
