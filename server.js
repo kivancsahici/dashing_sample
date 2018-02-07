@@ -1,5 +1,5 @@
-var dashing = require('node-dashing-js').Dashing();
-
+//var dashing = require('node-dashing-js').Dashing();
+var dashing = require("nuvo-dashing-js").Dashing();
 // Set your auth token here
 //dashing.auth_token = 'YOUR_AUTH_TOKEN';
 
