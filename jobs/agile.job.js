@@ -5,7 +5,7 @@ function foo(activeSprintId, endDate, sprintName)
 		var inprog_issues = [];
 		var closed_issues = [];
 		var todo_issues = [];		
-		
+		console.log("will access issues api");
 		request({
 			url: 'https://dashing-mock-api.herokuapp.com/issues',
 	        headers: {
@@ -14,11 +14,12 @@ function foo(activeSprintId, endDate, sprintName)
 	        }
 	    }, function(error, response, body) {
 	        if (error || typeof response === 'undefined'){
-				//api access error
+				console.log("api access error");
 			} 
 			else if(response.statusCode != 200) {	    
-				//api access was not sucessful
-	        } else {				
+				console.log("api access was not sucessful");
+	        } else {
+				console.log("api access successful");
 	        	var closedIssueCount = 0;
 				var totalNoIssues = 0;
 	        	var issues = JSON.parse(body)//.issues;
@@ -93,5 +94,5 @@ function foo(activeSprintId, endDate, sprintName)
 function main() {
 	foo(1,1,'Sprint 12');
 }
-setInterval(main, 35000);  
+setInterval(main, 10000);  
 main();
