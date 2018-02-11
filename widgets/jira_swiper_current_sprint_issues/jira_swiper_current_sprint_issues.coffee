@@ -12,7 +12,7 @@ class Dashing.JiraSwiperCurrentSprintIssues extends Dashing.Widget
    @mySwiper = new Swiper($(@node).find('.swiper-container'),
      direction: 'horizontal'
      loop: true
-     autoplay: 10000
+     autoplay: 2000
      pagination: $(@node).find('.swiper-pagination'))
      
  addSlide: ->
