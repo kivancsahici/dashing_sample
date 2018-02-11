@@ -1,0 +1,62 @@
+<script type='text/javascript'> 
+	$(function() { 
+		// These settings override the defaults set in application.coffee. You can do this on a per dashboard basis. 
+		Dashing.widget_margins = [10, 10]
+		Dashing.widget_base_dimensions = [600, 86]
+		Dashing.numColumns = 3
+	}); 
+    
+</script> 
+ 
+<style>
+	.swiper-container {
+		width: 500px;
+		height: 500px;
+	}
+	.widget-text {
+		padding: 12px 12px !important;
+	}
+	.widget-text .title{
+		color: white;	
+		font-size: 2em;
+		font-weight:bold;
+	}
+	.jira-todo-issues {
+		background-color: #f79b47;
+	}
+	.jira-in-prog-issues {
+		background-color: #f66131;
+	}
+	.jira-closed-issues {
+		background-color: #f8311a;
+	}
+	.widget-image {
+		background-color: #f12c19;
+	}  	
+</style>
+
+<div class="gridster">
+   <ul>
+      <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+         <div data-id="welcome" data-view="Text" data-title="ACME Agile Dashboard"></div>
+      </li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+         <div data-view="Image" data-image="/agile.png"></div>
+      </li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+         <div data-id="sprintcountdown" data-view="Countdown" data-title="TIME LEFT"></div>
+      </li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+         <div data-id="sprint-progress" data-view="SprintProgress" data-title="Sprint Progress" data-min="0" data-max="100"></div>
+      </li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="5">
+         <div data-id="jira-todo-issues" data-view="JiraSwiperCurrentSprintIssues"></div>
+      </li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="5">
+         <div data-id="jira-in-prog-issues" data-view="JiraSwiperCurrentSprintIssues"></div>
+      </li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="5">
+         <div data-id="jira-closed-issues" data-view="JiraSwiperCurrentSprintIssues"></div>
+      </li>
+   </ul>
+</div>
