@@ -94,5 +94,5 @@ function foo(activeSprintId, endDate, sprintName)
 function main() {
 	foo(1,1,'Sprint 12');
 }
-setInterval(main, 10000);  
+setInterval(main, 120000);  
 main();
