@@ -13,3 +13,7 @@ SET VIEW_ENGINE=ejs
 
 On Linux, as usual
 export VIEW_ENGINE=ejs
+
+On Heroku, you can edit config vars on your app’s settings tab on Dashboard
+key VIEW_ENGINE
+value ejs
