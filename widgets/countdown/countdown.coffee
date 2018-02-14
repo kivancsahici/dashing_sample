@@ -4,7 +4,7 @@ class Dashing.Countdown extends Dashing.Widget
     @tempDate = new Date()
     @tempDate.setDate(@tempDate.getDate() + 6)
     @end_timestamp = Math.round(@tempDate.getTime()/1000)
-    $(@node).find(".more-info").html(@tempDate.getDate())
+    $(@node).find(".more-info").html(@tempDate.toLocaleString())
     window.refreshIntervalId = setInterval(@startCountdown, 500)
 
   startCountdown: =>
