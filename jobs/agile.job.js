@@ -62,9 +62,9 @@ function foo(activeSprintId, endDate, sprintName)
 					}
 	     	    }
 	        	
-				send_event('jira-in-prog-issues', { header: sprintName, issue_type: 'IN PROGRESS', issues: inprog_issues});
-				send_event('jira-closed-issues', { header: sprintName, issue_type: 'CLOSED', issues: closed_issues});
-				send_event('jira-todo-issues', { header: sprintName, issue_type: 'TO DO', issues: todo_issues});
+				send_event('jira-in-prog-issues', { chunkSize: 5, header: sprintName, issue_type: 'IN PROGRESS', issues: inprog_issues});
+				send_event('jira-closed-issues', { chunkSize: 5, header: sprintName, issue_type: 'CLOSED', issues: closed_issues});
+				send_event('jira-todo-issues', { chunkSize: 5, header: sprintName, issue_type: 'TO DO', issues: todo_issues});
 																
 	     	    //this.endDate = endDate;
 	        	this.activeSprintId = activeSprintId;
@@ -94,5 +94,5 @@ function foo(activeSprintId, endDate, sprintName)
 function main() {
 	foo(1,1,'Sprint 12');
 }
-setInterval(main, 120000);  
+setInterval(main, 720000);  
 main();
